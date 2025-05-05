@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Method</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000000;
+            color: #ab8203;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        h1 {
+            padding-top: 18px;
+            color: #ab8203;
+        }
+
+        hr {
+            margin-top: -20px;
+            border: #ab8203 solid 2px;
+        }
+
+        .payment-options {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .payment-option {
+            width: 150px;
+            padding: 15px;
+            border: 2px solid #ab8203;
+            border-radius: 8px;
+            background-color: #000000;
+            cursor: pointer;
+            transition: transform 0.3s, background-color 0.3s;
+            text-align: center;
+            margin-top: 8%;
+        }
+
+        .payment-option img {
+            width: 100%;
+            height: 150px;
+            object-fit: fill;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .payment-option span {
+            display: block;
+            font-size: 16px;
+            color: #ab8203;
+        }
+
+        .payment-option:hover {
+            background-color: #ab8203;
+            color: #000000;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <h1>Select Your Payment Method</h1>
+    <hr>
+    <div class="payment-options">
+        <div class="payment-option" onclick="selectPaymentMethod('Gcash')">
+            <img src="https://yt3.googleusercontent.com/1C4473sd-Ppj0Hddbz9KJ6Fndn63OBazP2PvF-s6TP3cLBzoM6cTATmF8V3K6d6EEnv7EXzE=s900-c-k-c0x00ffffff-no-rj" alt="Gcash">
+            <span>Gcash</span>
+        </div>
+        <div class="payment-option" onclick="selectPaymentMethod('Card')">
+            <img src="https://finocent-basket.s3.ap-south-1.amazonaws.com/wp-content/uploads/2021/08/07022813/debit-cards-credit-cards-1.jpg" alt="Card">
+            <span>Card</span>
+        </div>
+        <div class="payment-option" onclick="selectPaymentMethod('Cash')">
+            <img src="https://t4.ftcdn.net/jpg/08/68/55/35/360_F_868553507_EqRHB2dIgr1rhaJDFrbeykFo9Z6DNG4m.jpg" alt="Cash">
+            <span>Cash</span>
+        </div>
+    </div>
+
+    <script>
+        function selectPaymentMethod(method) {
+            localStorage.setItem('paymentMethod', method);
+
+            window.location.href = 'receipt.html';
+        }
+    </script>
+</body>
+</html>

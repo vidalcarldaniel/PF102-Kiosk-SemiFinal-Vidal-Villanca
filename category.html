@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twinkle Sky</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Select Category</h1>
+        <hr>
+        <div class="section1">
+            <div class="category-box">
+                <button onclick="goToMainCourse()">
+                    <img src="https://www.flavcity.com/wp-content/uploads/2018/07/porterhouse-potatoes-500x375.jpg" alt="maincourse.img">
+                    <h3>Main Course</h3>
+                </button>
+            </div>
+
+            <div class="category-box">
+                <button onclick="goToSeaFood()">
+                    <img src="https://img.cdn4dd.com/cdn-cgi/image/fit=contain,width=1200,height=672,format=auto/https://doordash-static.s3.amazonaws.com/media/store/header/d002accc-a808-4e6e-bc2e-182096e36814.png" alt="seafoods.img">
+                    <h3>Sea Food</h3>
+                </button>
+            </div>
+        </div>
+        <div class="section2">
+            <div class="category-box">
+                <button onclick="goToDesserts()">
+                    <img src="https://www.foodandwine.com/thmb/ckc6L6xKox0WfpfO6dMkuVGPQOY=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Angel-Food-Cake-with-Three-Berry-Compote-FT-RECIPE0323-541a780b871441e0ab14383ee38acc44.jpg" alt="desserts.img">
+                    <h3>Desserts</h3>
+                </button>
+            </div>
+
+            <div class="category-box">
+                <button onclick="goToAppetizers()">
+                    <img src="https://images-gmi-pmc.edge-generalmills.com/fca4b25f-5859-4048-974c-4ef02a0014ee.jpg" alt="appetizers.img">
+                    <h3>Appetizers</h3>
+                </button>
+            </div>
+        </div>
+        <div class="section3">
+            <div class="category-box">
+                <button onclick="goToFastFood()">
+                    <img src="https://static.toiimg.com/photo/95665037.cms" alt="fastfood.img">
+                    <h3>Fast Food</h3>
+                </button>
+                
+            </div>
+
+            <div class="category-box">
+                <button onclick="goToDrinks()">
+                    <img src="https://murukali.com/cdn/shop/collections/Cool-drinks-for-summer-770x513.webp?v=1690457984" alt="Drinks.img">
+                    <h3>Drinks</h3>
+                </button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            font-family: cursive;
+            text-align: center;
+        }
+        body {
+            background-color: #000000;
+        }
+        h1 {
+            padding-top: 30px;
+            color: #ab8203;
+        }
+        hr {
+            border: #ab8203 solid 2px;
+        }
+        .section1, .section2, .section3, .section4 {
+            display: flex;
+            width: 100%;
+            justify-content: space-around;
+            margin: 4% auto;
+        }
+        button {
+            cursor: pointer;
+            border: none;
+        }
+        .category-box {
+            width: 380px;
+            height: 280px;
+            border: #ab8203 solid 2px;
+            box-shadow: #ab8203 0 5px 16px;
+        }
+        .category-box:hover {
+            box-shadow: white 0 5px 16px;
+            transform: scale(1.08);
+            transition: 1s;
+        }
+        .category-box img {
+            width: 380px;
+            height: 280px;
+        }
+        .category-box h3 {
+            position: relative;
+            margin: -40px auto;
+            background-color: black;
+            color: #ab8203;
+            border: 1px #ab8203 solid;
+            width: 80%;
+            border-radius: 25px;
+        }
+    </style>
+</body>
+</html>

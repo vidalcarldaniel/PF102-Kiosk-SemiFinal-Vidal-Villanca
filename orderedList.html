@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twinkle Sky</title>
+</head>
+<body>
+    <h1>Your Order Summary</h1>
+    <hr>
+    <div class="container">
+        <div id="order-list"></div>
+        <h3 id="order-total"></h3>
+    </div>
+    <div class="back-Confirm-Btn">
+        <button onclick="goBack()">Go Back</button>
+        <button onclick="confirmOrder()">Confirm Order</button>
+    </div>
+
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #000000  ;
+        margin: 0;
+        padding: 0;
+    }   
+    h1 {
+        text-align: center;
+        color: #ab8203;
+        padding-top: 18px;
+     }  
+    hr {
+        border: 2px solid #ab8203;
+        margin-top: -20px;
+    }
+    h3 {
+        text-align: center;
+        margin-left: 72%;
+        color: #ab8203;
+        border: #ab8203 solid 1px;
+        width: 25%;
+        border-radius: 5px;
+        padding: 5px;
+    }    
+    .container {
+        max-width: 600px;
+        margin: 1% auto 0 auto;
+    }
+    .container {
+        padding: 20px;
+        background-color: #000000;
+        border: 1px solid #ab8203;
+        border-radius: 8px;
+        color: #ab8203;
+        box-shadow: #ab8203 0 5px 8px;
+    }   
+    .order-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        padding: 10px;
+        border-bottom: 1px solid #ab8203;
+    }
+
+    .item-details {
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+
+    .item-image {
+        width: 80px;
+        height: 60px;
+        object-fit: cover;
+        border-radius: 6px;
+        border: 2px solid #ab8203;
+        margin-right: 10px;
+    }
+
+    .item-name {
+        flex: 1;
+        margin-right: 10px;
+    }
+
+    .item-quantity {
+        margin-right: 10px;
+    }
+
+    .item-price {
+        margin-right: 10px;
+    }
+
+    .item-buttons button {
+        margin-left: 5px;
+        padding: 5px 10px;
+        border: 1px solid #ab8203;
+        background-color: #000000;
+        color: #ab8203;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    .item-buttons button:hover {
+        background-color: #ab8203;
+        color: #000000;
+    }
+
+    .back-Confirm-Btn button{
+        width: 25%;
+        padding: 8px;
+        border: #ab8203 solid 2px;
+        background-color: #000000;
+        color: #ab8203;
+        border-radius: 25px;
+        cursor: pointer;
+        margin-bottom: -20px;
+    }
+    .back-Confirm-Btn {
+        display: flex;
+        justify-content: space-around;
+        width: 30%;
+        margin: 25px auto;
+    }
+    .back-Confirm-Btn button:hover{
+        box-shadow: white 0 2px 8px;
+        transform: scale(1.08);
+        transition: 1s;
+        background-color: #ab8203;
+        border: #000000 solid 2px;
+        color: #000000;
+    }
+
+    #order-list {
+        max-height: 380px;
+        overflow-y: auto;
+        border: 1px solid #ab8203;
+        padding: 10px;
+        border-radius: 8px;
+        box-shadow: inset 0 0 5px #ab8203;
+    }
+
+    #order-list::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    #order-list::-webkit-scrollbar-thumb {
+        background-color: #ab8203;
+        border-radius: 4px;
+    }
+
+    #order-list::-webkit-scrollbar-track {
+        background-color: #000000;
+    }
+    </style>
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const orderList = document.getElementById('order-list');
+        const orderTotal = document.getElementById('order-total');
+        let data = JSON.parse(localStorage.getItem('orderData')) || [];
+
+        function updateOrderList() {
+            orderList.innerHTML = '';
+            let total = 0;
+
+            data.forEach((item, index) => {
+                const itemTotal = item.price * item.quantity;
+                total += itemTotal;
+
+                const div = document.createElement('div');
+                div.className = 'order-item';
+                div.innerHTML = `
+                    <div class="item-details">
+                        <img src="${item.image}" alt="${item.name}" class="item-image">
+                        <span class="item-name"><strong>${item.name}</strong></span>
+                        <span class="item-quantity">× ${item.quantity}</span>
+                        <span class="item-price">₱${itemTotal.toLocaleString()}</span>
+                        <div class="item-buttons">
+                            <button onclick="increaseQuantity(${index})">+</button>
+                            <button onclick="decreaseQuantity(${index})">−</button>
+                            <button onclick="deleteItem(${index})">Delete</button>
+                        </div>
+                    </div>
+                `;
+                orderList.appendChild(div);
+            });
+
+            orderTotal.innerHTML = `<strong>Total:</strong> ₱${total.toLocaleString()}`;
+            localStorage.setItem('orderData', JSON.stringify(data));
+        }
+
+        window.increaseQuantity = function (index) {
+            data[index].quantity += 1;
+            updateOrderList();
+        };
+
+        window.decreaseQuantity = function (index) {
+            if (data[index].quantity > 1) {
+                data[index].quantity -= 1;
+            } else {
+                data.splice(index, 1);
+            }
+            updateOrderList();
+        };
+
+        window.deleteItem = function (index) {
+            data.splice(index, 1);
+            updateOrderList();
+        };
+
+        updateOrderList();
+    });
+
+    function goBack() {
+        window.location.href = 'category.html';
+    }
+
+    function confirmOrder() {
+        window.location.href = 'payment.html';
+    }
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

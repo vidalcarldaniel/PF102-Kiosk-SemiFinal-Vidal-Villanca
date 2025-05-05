@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twinkle Sky</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <i onclick="goBackToCategory()" class='bx bx-arrow-back'></i>
+        <h1>Main Course</h1>
+        <hr>
+        <div class="section1">
+            <div class="category-box">
+                <button onclick="addToCart('Beef Steak', 10000, 'https://www.allrecipes.com/thmb/WKmIvwiagf7srT2e6MM8dao_h_c=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/AR-14554-sirloin-steak-with-garlic-butter-hero-2x1-565193371f3f491eba85b1d0d147e1a7.jpg')">
+                    <img src="https://www.allrecipes.com/thmb/WKmIvwiagf7srT2e6MM8dao_h_c=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/AR-14554-sirloin-steak-with-garlic-butter-hero-2x1-565193371f3f491eba85b1d0d147e1a7.jpg">
+                    <h3>Beef Steak</h3>
+                </button>
+            </div>
+            <div class="category-box">
+                <button onclick="addToCart('Wagyu Beef', 20000, 'https://www.thetakeout.com/img/gallery/so-what-exactly-is-wagyu-beef-anyway/l-intro-1724873729.jpg')">
+                    <img src="https://www.thetakeout.com/img/gallery/so-what-exactly-is-wagyu-beef-anyway/l-intro-1724873729.jpg">
+                    <h3>Wagyu Beef</h3>
+                </button>
+            </div>
+            <div class="category-box">
+                <button onclick="addToCart('Ribs Beef', 8000, 'https://d21klxpge3tttg.cloudfront.net/wp-content/uploads/2013/07/BEEF-RIBS-102621.jpg')">
+                    <img src="https://d21klxpge3tttg.cloudfront.net/wp-content/uploads/2013/07/BEEF-RIBS-102621.jpg">
+                    <h3>Ribs Beef</h3>
+                </button>
+            </div>
+        </div>
+        <div class="section2">
+            <div class="category-box">
+                <button onclick="addToCart('Chicken Curry', 2000, 'https://www.thespruceeats.com/thmb/ZhHfueqa1L-sa7N39UoRU8B2Jlc=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/south-indian-style-chicken-curry-1957789-hero-01-4886b469548e40278351a0085a4d9c92.jpg')">
+                    <img src="https://www.thespruceeats.com/thmb/ZhHfueqa1L-sa7N39UoRU8B2Jlc=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/south-indian-style-chicken-curry-1957789-hero-01-4886b469548e40278351a0085a4d9c92.jpg">
+                    <h3>Chicken Curry</h3>
+                </button>
+            </div>
+            <div class="category-box">
+                <button onclick="addToCart('Chicken Adobo', 2200, 'https://images.immediate.co.uk/production/volatile/sites/2/2019/10/134_Roma_9780451497017_art_r1-facac84.jpg')">
+                    <img src="https://images.immediate.co.uk/production/volatile/sites/2/2019/10/134_Roma_9780451497017_art_r1-facac84.jpg">
+                    <h3>Chicken Adobo</h3>
+                </button>
+            </div>
+            <div class="category-box">
+                <button onclick="addToCart('Korean Beef Bolgogi', 8000, 'https://www.spoonforkbacon.com/wp-content/uploads/2021/05/beef_bulgogi_recipe_card.jpg')">
+                    <img src="https://www.spoonforkbacon.com/wp-content/uploads/2021/05/beef_bulgogi_recipe_card.jpg" alt="appetizers.img">
+                    <h3>Korean Beef Bolgogi</h3>
+                </button>
+            </div>
+        </div>
+        <div class="section3">
+            <div class="category-box">
+                <button onclick="addToCart('Chicken Thighs and Funnel Pasta', 3000, 'https://assets.epicurious.com/photos/652562a90c02840421021bd3/1:1/w_5504,h_5504,c_limit/One-Pan%20Crispy%20Braised%20Thighs%20and%20Fennel%20Pasta-RECIPE.jpg')">
+                    <img src="https://assets.epicurious.com/photos/652562a90c02840421021bd3/1:1/w_5504,h_5504,c_limit/One-Pan%20Crispy%20Braised%20Thighs%20and%20Fennel%20Pasta-RECIPE.jpg">
+                    <h3>Chicken Thighs and Funnel Pasta</h3>
+                </button>
+            </div>
+            <div class="category-box">
+                <button onclick="addToCart('Bibimbap', 2500, 'https://www.thespruceeats.com/thmb/eFzxoZFO-ZWurv42gxrBveHYOf4=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/classic-korean-bibimbap-recipe-2118765-step-011-acab906539594dc9a668c7fbb753c43d.jpg')">
+                    <img src="https://www.thespruceeats.com/thmb/eFzxoZFO-ZWurv42gxrBveHYOf4=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/classic-korean-bibimbap-recipe-2118765-step-011-acab906539594dc9a668c7fbb753c43d.jpg">
+                    <h3>Bibimbap</h3>
+                </button>
+            </div>
+            <div class="category-box">
+                <button onclick="addToCart('Tteokbokki', 4000, 'https://www.cathaypacific.com/content/dam/focal-point/cx/inspiration/2024/10/The_11_best_Korean_dishes_to_try-Tteokbokki_with_eggs_in_gray_bowl-Andrei_Kravtsov-Gettyimages-12.renditionimage.900.900.jpg')">
+                    <img src="https://www.cathaypacific.com/content/dam/focal-point/cx/inspiration/2024/10/The_11_best_Korean_dishes_to_try-Tteokbokki_with_eggs_in_gray_bowl-Andrei_Kravtsov-Gettyimages-12.renditionimage.900.900.jpg">
+                    <h3>Tteokbokki</h3>
+                </button>
+            </div>
+        </div>
+        <div id="cart" class="cart">
+            <div class="cart-header">
+            <h3>Orders</h3>
+            <span id="toggleCart">▶</span>
+            </div>
+            <div class="cart-body" id="cart-items"></div>
+            <button class="proceed-btn" onclick="proceedToOrder()">Proceed</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

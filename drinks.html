@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Twinkle Sky - Drinks</title>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+    <i onclick="goBackToCategory()" class='bx bx-arrow-back'></i>
+    <h1>Drinks</h1>
+    <hr>
+
+    <div class="section1">
+        <div class="category-box">
+            <button onclick="addToCart('Lemon Tea', 120, 'https://static.toiimg.com/photo/84339280.cms')">
+                <img src="https://static.toiimg.com/photo/84339280.cms">
+                <h3>Lemon Tea</h3>
+            </button>
+        </div>
+        <div class="category-box">
+            <button onclick="addToCart('Iced Hibiscus Tea', 280, 'https://d10nzz67fbk70l.cloudfront.net/wp-content/uploads/2018/05/20202117/Iced-Tea-Sparkler.jpg.webp')">
+                <img src="https://d10nzz67fbk70l.cloudfront.net/wp-content/uploads/2018/05/20202117/Iced-Tea-Sparkler.jpg.webp">
+                <h3>Iced Hibiscus Tea</h3>
+            </button>
+        </div>
+        <div class="category-box">
+            <button onclick="addToCart('Iced Orange Tea', 200, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmfDitVFSf-XXXUKeNLKnEPfuHoIyTVNrQcg&s')">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmfDitVFSf-XXXUKeNLKnEPfuHoIyTVNrQcg&s">
+                <h3>Iced Orange Tea</h3>
+            </button>
+        </div>
+    </div>
+
+    <div class="section2">
+        <div class="category-box">
+            <button onclick="addToCart('Matcha Latte', 300, 'https://www.butteredsideupblog.com/wp-content/uploads/2022/07/Starbucks-Hot-Matcha-Green-Tea-Latte-Recipe-16-scaled.jpg')">
+                <img src="https://www.butteredsideupblog.com/wp-content/uploads/2022/07/Starbucks-Hot-Matcha-Green-Tea-Latte-Recipe-16-scaled.jpg">
+                <h3>Matcha Latte</h3>
+            </button>
+        </div>
+        <div class="category-box">
+            <button onclick="addToCart('Luwak Coffee', 550, 'https://magazine.bluekarmasecrets.com/wp-content/uploads/2019/10/1.-aman-kuba-coffee-manfaat-kopi.jpg')">
+                <img src="https://magazine.bluekarmasecrets.com/wp-content/uploads/2019/10/1.-aman-kuba-coffee-manfaat-kopi.jpg">
+                <h3>Luwak Coffee</h3>
+            </button>
+        </div>
+        <div class="category-box">
+            <button onclick="addToCart('Cappuccino Coffee', 320, 'https://www.netmeds.com/images/cms/wysiwyg/blog/Post/2018/10/coffee_its_benefits_898_1_.jpg')">
+                <img src="https://www.netmeds.com/images/cms/wysiwyg/blog/Post/2018/10/coffee_its_benefits_898_1_.jpg">
+                <h3>Cappuccino Coffee</h3>
+            </button>
+        </div>
+    </div>
+
+    <div class="section3">
+        <div class="category-box">
+            <button onclick="addToCart('Domaine de La Romanée-Conti', 35000, 'https://manila-wine.com/media/catalog/product/cache/ab779e9c28832bdb1d1b6d48074ac569/r/o/romanee-conti-2010.jpg')">
+                <img src="https://manila-wine.com/media/catalog/product/cache/ab779e9c28832bdb1d1b6d48074ac569/r/o/romanee-conti-2010.jpg">
+                <h3>Domaine de La Romanée-Conti</h3>
+            </button>
+            </div>
+            <div class="category-box">
+            <button onclick="addToCart('Château Rayas', 25000, 'https://manila-wine.com/media/catalog/product/cache/ab779e9c28832bdb1d1b6d48074ac569/c/h/ch_teau_rayas_-_ch_teauneuf-du-pape_r_serv_blanc_1.jpg')">
+                <img src="https://manila-wine.com/media/catalog/product/cache/ab779e9c28832bdb1d1b6d48074ac569/c/h/ch_teau_rayas_-_ch_teauneuf-du-pape_r_serv_blanc_1.jpg">
+                <h3>Château Rayas</h3>
+            </button>
+            </div>
+            <div class="category-box">
+            <button onclick="addToCart('La Cuvée', 20000, 'https://manila-wine.com/media/catalog/product/cache/ab779e9c28832bdb1d1b6d48074ac569/l/a/laurent-perrier-la-cuvee-brut.jpg')">
+                <img src="https://manila-wine.com/media/catalog/product/cache/ab779e9c28832bdb1d1b6d48074ac569/l/a/laurent-perrier-la-cuvee-brut.jpg">
+                <h3>La Cuvée</h3>
+            </button>
+        </div>
+    </div>
+        <div id="cart" class="cart">
+            <div class="cart-header">
+                <h3>Orders</h3>
+                <span id="toggleCart">▶</span>
+            </div>
+                <div class="cart-body" id="cart-items"></div>
+                <button class="proceed-btn" onclick="proceedToOrder()">Proceed</button>
+        </div>
+    </div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

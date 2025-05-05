@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twinkle Sky</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: cursive;
+        }
+        body {
+            background-color: #000000;
+        }
+        h1 {
+            color: #ab8203;
+            text-align: center;
+            padding-top: 30px;
+        }
+        hr {
+            border: 2px solid #ab8203;
+        }
+        .container {
+            width: 60%;
+            margin: 1% auto;
+        }
+        .choose {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 15%;
+        }
+        .choose button {
+            background-color: #000000;
+            border: 2px solid #ab8203;
+            border-radius: 8px;
+            padding: 25px;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-align: center;
+        }
+        .choose button:hover {
+            box-shadow: white 0 5px 16px;
+            transform: scale(1.08);
+        }
+        .choose img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        .choose span {
+            display: block;
+            margin-top: 10px;
+            color: #ab8203;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Choose</h1>
+        <hr>
+    <div class="container">
+        
+        <div class="choose">
+            <button onclick="selectDineOption('Dine In')">
+                <img src="https://www.restobiz.ca/wp-content/uploads/2020/07/dine-in-dead.jpg" alt="DineIn.png">
+                <span>Dine In</span>
+            </button>
+            <button onclick="selectDineOption('Take Out')">
+                <img src="https://www.vmcdn.ca/f/files/halifaxtoday/images/food/111918-take-out-takeout-fast-food-coffee-adobestock_169041735.jpeg;w=960" alt="TakeOut.png">
+                <span>Take Out</span>
+            </button>
+        </div>
+    </div>
+    <script>
+        function selectDineOption(option) {
+            localStorage.setItem('dineOption', option);
+            window.location.href = 'category.html';
+        }
+    </script>
+</body>
+</html>

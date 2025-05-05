@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twinkle Sky</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: cursive;
+            text-align: center;
+        }
+        body {
+            background-color: #000000;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            text-align: center;
+        }
+        .container img {
+            margin-top: 20px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(171, 130, 3, 0.5);
+        }
+        h1 {
+            font-size: 3rem;
+            color: #ab8203;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+        button {
+            background-color: #ab8203;
+            color: #000000;
+            padding: 15px 30px;
+            border-radius: 25px;
+            margin-top: 50px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 10px rgba(171, 130, 3, 0.5);
+            width: 60%;
+        }
+        button:hover {
+            background-color: #000000;
+            color: #ab8203;
+            transform: scale(1.1);
+            box-shadow: 0 2px 12px #ffffff;
+            border: 2px solid #ab8203;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>WELCOME TO</h1>
+        <img src="images/logo.png" alt="Twinkle Sky Logo" width="400" height="300"> <br>
+        <button onclick="goToChoices()">Proceed</button>
+    </div>
+    <script>
+        function goToChoices() {
+            window.location.href = 'choices.html';
+        }
+    </script>
+</body>
+</html>

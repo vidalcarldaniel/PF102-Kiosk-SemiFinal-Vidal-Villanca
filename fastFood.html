@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Twinkle Sky - Fast Food</title>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <i onclick="goBackToCategory()" class='bx bx-arrow-back'></i>
+        <h1>Fast Food</h1>
+        <hr>
+
+        <div class="section1">
+            <div class="category-box">
+                <button onclick="addToCart('Bacon Cheese Burger', 500, 'https://www.sargento.com/assets/Uploads/Recipe/Image/GreatAmericanBurger__FocusFillWyIwLjAwIiwiMC4wMCIsMTEwMCw2NTdd.jpg')">
+                <img src="https://www.sargento.com/assets/Uploads/Recipe/Image/GreatAmericanBurger__FocusFillWyIwLjAwIiwiMC4wMCIsMTEwMCw2NTdd.jpg">
+                <h3>Bacon Cheese Burger</h3>
+                </button>
+            </div>
+            <div class="category-box">
+                <button onclick="addToCart('Cheese Burger', 380, 'https://leitesculinaria.com/wp-content/uploads/2020/02/classic-cheeseburger-1200.jpg')">
+                <img src="https://leitesculinaria.com/wp-content/uploads/2020/02/classic-cheeseburger-1200.jpg">
+                <h3>Cheese Burger</h3>
+                </button>
+            </div>
+            <div class="category-box">
+                <button onclick="addToCart('Fish Fillet Sandwich', 320, 'https://www.southernliving.com/thmb/fAHaDY1jvEDI0r59bHrngHCgN1Y=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/27441_BeachEats_6330_MAIN_preview-aec5fec9ebb3445388b921a5eca2f9d4.jpg')">
+                <img src="https://www.southernliving.com/thmb/fAHaDY1jvEDI0r59bHrngHCgN1Y=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/27441_BeachEats_6330_MAIN_preview-aec5fec9ebb3445388b921a5eca2f9d4.jpg">
+                <h3>Fish Fillet Sandwich</h3>
+                </button>
+            </div>
+        </div>
+
+        <div class="section2">
+            <div class="category-box">
+                <button onclick="addToCart('Chili Dog', 300, 'https://staticcookist.akamaized.net/wp-content/uploads/sites/22/2022/02/chili-dogs.jpg?im=AspectCrop=(16,9);')">
+                <img src="https://staticcookist.akamaized.net/wp-content/uploads/sites/22/2022/02/chili-dogs.jpg?im=AspectCrop=(16,9);">
+                <h3>Chili Dog</h3>
+                </button>
+            </div>
+            <div class="category-box">
+                <button onclick="addToCart('French Fries', 250, 'https://thissillygirlskitchen.com/wp-content/uploads/2020/02/homemade-french-fries-8-1.jpg')">
+                <img src="https://thissillygirlskitchen.com/wp-content/uploads/2020/02/homemade-french-fries-8-1.jpg">
+                <h3>French Fries</h3>
+                </button>
+            </div>
+            <div class="category-box">
+                <button onclick="addToCart('Grilled Cheese Sandwich', 280, 'https://www.jocooks.com/wp-content/uploads/2024/01/grilled-cheese-1-9-500x500.jpg')">
+                <img src="https://www.jocooks.com/wp-content/uploads/2024/01/grilled-cheese-1-9-500x500.jpg">
+                <h3>Grilled Cheese Sandwich</h3>
+                </button>
+            </div>
+        </div>
+
+        <div class="section3">
+            <div class="category-box">
+                <button onclick="addToCart('Spicy Chicken Sandwich', 300, 'https://thebigmansworld.com/wp-content/uploads/2024/11/spicy-chicken-sandwich-recipe.jpg')">
+                <img src="https://thebigmansworld.com/wp-content/uploads/2024/11/spicy-chicken-sandwich-recipe.jpg">
+                <h3>Spicy Chicken Sandwich</h3>
+                </button>
+            </div>
+            <div class="category-box">
+                <button onclick="addToCart('Chicken Nuggets', 280, 'https://www.simplyrecipes.com/thmb/qbL8oWWaC6n2I3T9jDJ6H5fvGZI=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Simply-Recipes-Parmesan-Chicken-Nuggets-2-LEAD-4-bdd704ba97e040ae846b43fabea948ec.jpg')">
+                <img src="https://www.simplyrecipes.com/thmb/qbL8oWWaC6n2I3T9jDJ6H5fvGZI=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Simply-Recipes-Parmesan-Chicken-Nuggets-2-LEAD-4-bdd704ba97e040ae846b43fabea948ec.jpg">
+                <h3>Chicken Nuggets</h3>
+                </button>
+            </div>
+            <div class="category-box">
+                <button onclick="addToCart('Beef Taco', 320, 'https://www.thefoodinmybeard.com/content/taco/whitepeople/wpt10.jpg')">
+                <img src="https://www.thefoodinmybeard.com/content/taco/whitepeople/wpt10.jpg">
+                <h3>Beef Taco</h3>
+                </button>
+            </div>
+        </div>
+        <div id="cart" class="cart">
+            <div class="cart-header">
+                <h3>Orders</h3>
+                <span id="toggleCart">▶</span>
+            </div>
+                <div class="cart-body" id="cart-items"></div>
+                <button class="proceed-btn" onclick="proceedToOrder()">Proceed</button>
+        </div>
+    </div>
+  <script src="script.js"></script>
+
+</body>
+</html>
